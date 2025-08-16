@@ -7,6 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContexts<AppointmentContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
