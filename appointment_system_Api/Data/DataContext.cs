@@ -7,8 +7,8 @@ namespace appointment_system_Api.Data
         {
         }
 
-        public DbSet<Model.Patienete> Patientes { get; set; }
-        public DbSet<Model.Doctor> Doctors { get; set; }
-        public DbSet<Model.Appointment> Appointments { get; set; }
+        public DbSet<Model.Patienete> Patiente { get; set; }
+        public DbSet<Model.Doctor> Doctor { get; set; }
+        public DbSet<Model.Appointment> Appointment { get; set; }
     }
 }
