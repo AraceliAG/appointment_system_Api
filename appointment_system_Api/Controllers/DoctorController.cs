@@ -22,5 +22,7 @@ namespace appointment_system_Api.Controllers
         {
             return await _context.Doctor.ToListAsync();
         }
+
+        
     }
 }

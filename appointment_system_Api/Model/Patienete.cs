@@ -7,12 +7,12 @@ namespace appointment_system_Api.Model
     public class Patienete
     {
         [Key]
-        public int id_patient { get; set; }
-        public int Number_SS { get; set; }
+        public long id_patient { get; set; }
+        public string Number_SS { get; set; }
         public string Name { get; set; }
         public string Last_Name { get; set; }
-        public int Phone { get; set; }
-        public int Number_Appointment { get; set; }
+        public long Phone { get; set; }
+        public long Number_Appointment { get; set; }
         public string CURP { get; set; }
         public string Name_Hospital { get; set; }
 
