@@ -7,8 +7,9 @@ namespace appointment_system_Api.Model
     public class Appointment
     {
         [Key]
-        public int id_appointment { get; set; }
+        public long id_appointment { get; set; }
         public DateTime Date { get; set; }
         public bool Active { get; set; }
+        public long numero_Empleado { get; set; }
     }
 }
