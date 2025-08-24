@@ -13,7 +13,31 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
+builder.Services.AddCors(options =>
+
+{
+
+    options.AddPolicy("AllowAll", policy =>
+
+    {
+
+        policy.AllowAnyOrigin() // Permite solicitudes desde cualquier origen
+
+              .AllowAnyMethod() // Permite cualquier método (GET, POST, PUT, DELETE, etc.)
+
+              .AllowAnyHeader(); // Permite cualquier cabecera
+
+    });
+
+});
+
 var app = builder.Build();
+
+
+
+
+// Usa CORS antes de MapControllers()---------------------
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -21,6 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 

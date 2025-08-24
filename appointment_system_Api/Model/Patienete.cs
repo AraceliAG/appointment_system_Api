@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace appointment_system_Api.Model
@@ -7,7 +8,6 @@ namespace appointment_system_Api.Model
     public class Patienete
     {
         [Key]
-        public long id_patient { get; set; }
         public string Number_SS { get; set; }
         public string Name { get; set; }
         public string Last_Name { get; set; }
